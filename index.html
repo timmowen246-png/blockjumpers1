@@ -104,15 +104,10 @@
             3: [{"x":300,"y":550,"type":"spike"},{"x":200,"y":550,"type":"platform"},{"x":200,"y":500,"type":"platform"},{"x":150,"y":500,"type":"platform"},{"x":150,"y":550,"type":"platform"},{"x":350,"y":550,"type":"spike"},{"x":400,"y":550,"type":"spike"}],
             4: [{"x":150,"y":550,"type":"platform"},{"x":150,"y":500,"type":"platform"},{"x":200,"y":550,"type":"spike"},{"x":250,"y":550,"type":"spike"},{"x":300,"y":550,"type":"spike"},{"x":350,"y":550,"type":"platform"},{"x":350,"y":500,"type":"platform"},{"x":400,"y":550,"type":"spike"},{"x":450,"y":550,"type":"spike"},{"x":500,"y":550,"type":"spike"},{"x":550,"y":550,"type":"platform"},{"x":550,"y":500,"type":"platform"}],
             5: [{"x":100,"y":550,"type":"platform"},{"x":100,"y":500,"type":"platform"},{"x":100,"y":450,"type":"platform"},{"x":50,"y":550,"type":"platform"},{"x":150,"y":550,"type":"spike"},{"x":200,"y":550,"type":"spike"},{"x":250,"y":550,"type":"spike"},{"x":300,"y":550,"type":"platform"},{"x":400,"y":550,"type":"platform"},{"x":350,"y":550,"type":"platform"},{"x":400,"y":450,"type":"platform"},{"x":400,"y":350,"type":"platform"},{"x":400,"y":400,"type":"platform"},{"x":400,"y":300,"type":"platform"},{"x":450,"y":550,"type":"platform"},{"x":500,"y":550,"type":"platform"},{"x":550,"y":500,"type":"platform"},{"x":550,"y":450,"type":"platform"},{"x":550,"y":400,"type":"platform"},{"x":550,"y":350,"type":"platform"},{"x":450,"y":450,"type":"platform"},{"x":500,"y":350,"type":"platform"},{"x":600,"y":550,"type":"spike"},{"x":650,"y":550,"type":"spike"},{"x":400,"y":250,"type":"spike"},{"x":550,"y":550,"type":"platform"}],
-            // Level 6: The Leap of Faith (Precise gaps over a massive spike pit)
             6: [{"x":150,"y":550,"type":"spike"},{"x":200,"y":550,"type":"spike"},{"x":250,"y":550,"type":"spike"},{"x":300,"y":550,"type":"spike"},{"x":350,"y":450,"type":"platform"},{"x":400,"y":450,"type":"platform"},{"x":450,"y":550,"type":"spike"},{"x":500,"y":550,"type":"spike"},{"x":550,"y":550,"type":"spike"},{"x":600,"y":350,"type":"platform"},{"x":650,"y":350,"type":"platform"}],
-            // Level 7: Stairway Grid (Alternating heights forcing controlled micro-jumps)
             7: [{"x":150,"y":500,"type":"platform"},{"x":250,"y":400,"type":"platform"},{"x":300,"y":400,"type":"spike"},{"x":350,"y":300,"type":"platform"},{"x":450,"y":250,"type":"platform"},{"x":550,"y":350,"type":"platform"},{"x":650,"y":450,"type":"platform"},{"x":600,"y":550,"type":"spike"},{"x":550,"y":550,"type":"spike"}],
-            // Level 8: Ceiling Threat (Low overhead space requires avoiding high jumping)
             8: [{"x":200,"y":550,"type":"platform"},{"x":200,"y":350,"type":"platform"},{"x":250,"y":350,"type":"platform"},{"x":300,"y":350,"type":"platform"},{"x":350,"y":350,"type":"platform"},{"x":400,"y":350,"type":"platform"},{"x":450,"y":350,"type":"platform"},{"x":300,"y":550,"type":"spike"},{"x":350,"y":550,"type":"spike"},{"x":400,"y":550,"type":"spike"},{"x":550,"y":450,"type":"platform"}],
-            // Level 9: The Gauntlet (Sprinting through narrow windows)
             9: [{"x":150,"y":550,"type":"spike"},{"x":200,"y":500,"type":"platform"},{"x":250,"y":550,"type":"spike"},{"x":300,"y":450,"type":"platform"},{"x":350,"y":550,"type":"spike"},{"x":450,"y":400,"type":"platform"},{"x":500,"y":550,"type":"spike"},{"x":550,"y":550,"type":"spike"},{"x":600,"y":480,"type":"platform"}],
-            // Level 10: Final Matrix (Vertical maze climbing to find the end zone)
             10: [{"x":100,"y":450,"type":"platform"},{"x":200,"y":350,"type":"platform"},{"x":300,"y":250,"type":"platform"},{"x":400,"y":200,"type":"platform"},{"x":500,"y":200,"type":"spike"},{"x":550,"y":250,"type":"platform"},{"x":650,"y":350,"type":"platform"},{"x":700,"y":450,"type":"platform"},{"x":400,"y":400,"type":"spike"},{"x":450,"y":400,"type":"spike"},{"x":350,"y":550,"type":"spike"},{"x":400,"y":550,"type":"spike"},{"x":450,"y":550,"type":"spike"},{"x":500,"y":550,"type":"spike"}]
         };
 
@@ -233,7 +228,6 @@
             if (state.buffer.endsWith('jump')) player.jump = -22;
             if (state.buffer.endsWith('speed')) player.spd = 12;
             
-            // Warp logic: typing 'level1' through 'level9' or 'level0' for Level 10
             const m = state.buffer.match(/level(\d)/);
             if (m) {
                 let lvl = parseInt(m[1]);
